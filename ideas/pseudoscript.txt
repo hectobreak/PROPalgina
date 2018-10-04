@@ -1,0 +1,36 @@
+Clase {
+  asignatura: "FX"
+  grupo:      "X0"
+  subgrupo:   "XY"
+  tipo:       "L"
+  horaInicio: 10
+  horaFinal:  12
+  dia:        MARTES
+  nivel:      1 | 2 | 3 | 4 | 0
+  prereq:     [..]
+  oreq:       [..]
+  coreq:      [..]
+  precoreq:   [..]
+}
+
+horario :: [Clase]
+assigHechas :: [ nombres de asignaturas ]
+
+
+A x -> (cond x) == and [cond x | x <- Asignaturas]
+E x -> (cond x) == or  [cond x | x <- Asignaturas]
+
+
+solapar (x, y) = not ((x.horaFinal < y.horaInicio) || (x.horaInicio > y.horaFinal ) || (x.dia /= y.dia))
+list.allFound( list2 ) = for every x of list, x is an element of list2.
+list.oneFound( list2 ) = exists an x on list, where x is an element of list2.
+
+A x, y -> ( (x.grupo /= y.grupo) || not solapar (x, y) )
+A x    -> ( x.correq.allFound( horario.asignatura ) )
+A x    -> ( x.prereq.allFound( assigHechas ) )
+A x    -> ( x.oreq.oneFound( assigHechas ) )
+A x    -> ( x.precoreq.allFound( horario.asignatura ) || x.precoreq.allFound( assigHechas ) )
+
+A x,y..
+E x,y..
+== /= (< > <= >= para enteros) (|| && ! para booleanos)
