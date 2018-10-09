@@ -1,0 +1,81 @@
+Input del programa:
+	Lista de Asignaturas
+		- Grupos
+			- Subgrupos
+				- Aforo
+	Lista de Aulas
+	* Lista de Profesores
+	Lista de Restricciones
+		Con posibilidad de asociacion con Asignaturas
+		
+
+
+
+Funcionalitats:
+- Generar 1r horario == menu
+    - Gestion horarios
+        - Creación de horarios
+            # Crea un horario que cumpla las restricciones impuestas
+        - Guardar horarios
+            # Guarda el horario mostrado actualmente
+        - Cargar horarios
+            # Carga un horario existente
+		- Gestionar Restricciones
+			- Consultar Restricciones
+				# Muestra en formato lista todas las restricciones que se aplicarian actualmente a los horarios a generar
+			- Modificar Restricciones
+				- Crear Restricciones
+					# Añade la restriccion manualmente añadida a la lista de restricciones que tienen que cumplir los horarios generados (Y LA ACTIVA)
+				- Editar Restricciones
+					# Modifica una restriccion de las restricciones actuales
+				- Anular Restriccion
+					# Desactiva una restriccion de la lista de restricciones actuales
+				- Activar Restriccion
+					# Activa una restriccion de la lista de restricciones actuales
+    - Importar Datos
+        # Introduce todos los datos necesarios para poder crear horarios (Asignaturas, Aula, Profesores i los horarios de las clases)
+    - Preferencias (#IGNORE por ahora)
+        # Permite configurar ciertos aspectos por defecto de la ejecucion del programa (si es necesario)
+    - Ayuda
+        # Muestra los comandos y el como se tiene que escribir para poner una restriccion nueva
+    - Salir
+        # Finaliza el programa
+
+        
+#PRIVATE
+- Insertar Dades
+- Traduccio del requisits (input a codi)
+- Busqueda d'horaris
+- Guardar i Carregar dades
+
+
+##Idea -> Assignaturas aprobadas como parametro de requisitos y que en la lista de requisitos te ponga las aprobadas en una lista
+        - Requisitos
+            -Req1
+            -Req2
+            -Aprobadas
+                - FM
+                - F
+                - IC
+                - PRO1
+
+				
+				
+USUARIO		-> Gestionar Horario		-> Crear Horario
+																-> Gestionar Restricciones	-> Consultar Restricciones
+																							-> Modificar Restricciones	-> Crear Restricciones
+																														-> Editar Restricciones
+																														-> Anular Restricciones
+																														-> Activar Restricciones
+										-> Cargar Horario
+																-> Gestionar Restricciones	-> Consultar Restricciones
+																							-> Modificar Restricciones	-> Crear Restricciones
+																														-> Editar Restricciones
+																														-> Anular Restricciones
+																														-> Activar Restricciones
+										-> Guardar Horario
+										
+			-> Importar Datos
+			
+			
+			
